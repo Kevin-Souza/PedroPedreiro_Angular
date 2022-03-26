@@ -1,8 +1,11 @@
 <form (ngSubmit)="onConfirmar()" class="row g-3">
+    
     <div class="row g-3">
-        <h3>Cadastro de Clientes</h3>
+        <h3 class="Title">Cadastro de Clientes</h3>
     </div>
-    <div class="col-md-1">
+
+ 
+    <div class="col-md-1" style="margin: 10px;">
       <label for="inputId" class="form-label">ID</label>
       <input type="number" class="form-control" id="inputId" name="id" [(ngModel)]="model.id">
     </div>
@@ -19,15 +22,15 @@
     </div>
   
     <div class="col-md-2">
+        <label for="inputDataNascimento" class="form-label">Data Nascimento</label>
+        <input type="date" class="form-control" id="inputDataNascimento" name="dataNascimento"
+          [(ngModel)]="model.dataNascimento">
+      </div>
+
+    <div class="col-md-2">
       <label for="inputCartao" class="form-label">Cartão Fidelidade</label>
       <input type="text" class="form-control" id="inputCartao" name="numeroCartaoFidelidade"
         [(ngModel)]="model.numeroCartaoFidelidade">
-    </div>
-  
-    <div class="col-md-2">
-      <label for="inputDataNascimento" class="form-label">Data Nascimento</label>
-      <input type="date" class="form-control" id="inputDataNascimento" name="dataNascimento"
-        [(ngModel)]="model.dataNascimento">
     </div>
   
     <div class="col-md-4">
@@ -39,8 +42,10 @@
       <label for="inputTel" class="form-label">Telefone</label>
       <input type="tel" class="form-control" id="inputTel" name="telefone" [(ngModel)]="model.telefone">
     </div>
-  
+
     <div class="row g-3">
+
+        <h3 class="subTitle">Endereço</h3>
   
       <div class="col-md-4">
         <label for="inputLogradouro" class="form-label">Logradouro</label>
