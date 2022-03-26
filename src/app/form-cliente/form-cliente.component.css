@@ -1,6 +1,10 @@
 .subTitle{
-    color:darkorange;
+    color:yellow;
 }
 .Title{
-    color: darkorange;
+    color: yellow;
+}
+
+.form-label{
+    color: whitesmoke;
 }
