@@ -1,46 +1,47 @@
 <form (ngSubmit)="onConfirmar()" class="row g-3">
   <!--Título Inicial-->
   <div class="row g-3">
+
     <h3 class="Title" style="margin: 10px;">Cadastro de Clientes</h3>
-  </div>
 
+    <div class="col-md-1" style="margin: 10px;">
+      <label for="inputId" class="form-label">ID</label>
+      <input type="number" class="form-control" id="inputId" name="id" [(ngModel)]="model.id">
+    </div>
 
-  <div class="col-md-1" style="margin: 10px;">
-    <label for="inputId" class="form-label">ID</label>
-    <input type="number" class="form-control" id="inputId" name="id" [(ngModel)]="model.id">
-  </div>
+    <div class="col-md-4" style="margin: 10px;">
+      <label for="inputNome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="inputNome" name="nome" [(ngModel)]="model.nome">
+    </div>
+    
+    
+    <div class="col-md-2" style="margin: 10px;">
+      <label for="inputDocumento" class="form-label">Documento</label>
+      <input type="text" class="form-control" id="inputDocumento" name="documento" [(ngModel)]="model.documento">
+    </div>
 
-  <div class="col-md-4" style="margin: 10px;">
-    <label for="inputNome" class="form-label">Nome</label>
-    <input type="text" class="form-control" id="inputNome" name="nome" [(ngModel)]="model.nome">
-  </div>
-  
-  
-  <div class="col-md-2" style="margin: 10px;">
-    <label for="inputDocumento" class="form-label">Documento</label>
-    <input type="text" class="form-control" id="inputDocumento" name="documento" [(ngModel)]="model.documento">
-  </div>
-
-  <div class="col-md-2" style="margin: 10px;">
+    <div class="col-md-2" style="margin: 10px;">
       <label for="inputDataNascimento" class="form-label">Data Nascimento</label>
       <input type="date" class="form-control" id="inputDataNascimento" name="dataNascimento"
       [(ngModel)]="model.dataNascimento">
     </div>
 
-  <div class="col-md-2" style="margin: 10px;">
-    <label for="inputCartao" class="form-label">Cartão Fidelidade</label>
-    <input type="text" class="form-control" id="inputCartao" name="numeroCartaoFidelidade"
-    [(ngModel)]="model.numeroCartaoFidelidade">
-  </div>
+    <div class="col-md-2" style="margin: 10px;">
+      <label for="inputCartao" class="form-label">Cartão Fidelidade</label>
+      <input type="text" class="form-control" id="inputCartao" name="numeroCartaoFidelidade"
+      [(ngModel)]="model.numeroCartaoFidelidade">
+    </div>
 
-  <div class="col-md-4" style="margin: 10px;">
-    <label for="inputEmail" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail" name="email" [(ngModel)]="model.email">
-  </div>
-
-  <div class="col-md-2" style="margin: 10px;">
-    <label for="inputTel" class="form-label">Telefone</label>
-    <input type="tel" class="form-control" id="inputTel" name="telefone" [(ngModel)]="model.telefone">
+    <div class="col-md-4" style="margin: 10px;">
+      <label for="inputEmail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail" name="email" [(ngModel)]="model.email">
+    </div>
+    
+    <div class="col-md-2" style="margin: 10px;">
+      <label for="inputTel" class="form-label">Telefone</label>
+      <input type="tel" class="form-control" id="inputTel" name="telefone" [(ngModel)]="model.telefone">
+    </div>
+    
   </div>
 
   <div class="row g-3">
