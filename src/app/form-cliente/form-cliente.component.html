@@ -22,14 +22,12 @@
 
     <div class="col-md-2" style="margin: 10px;">
       <label for="inputDataNascimento" class="form-label">Data Nascimento</label>
-      <input type="date" class="form-control" id="inputDataNascimento" name="dataNascimento"
-      [(ngModel)]="model.dataNascimento">
+      <input type="date" class="form-control" id="inputDataNascimento" name="dataNascimento" [(ngModel)]="model.dataNascimento">
     </div>
 
     <div class="col-md-2" style="margin: 10px;">
       <label for="inputCartao" class="form-label">Cartão Fidelidade</label>
-      <input type="text" class="form-control" id="inputCartao" name="numeroCartaoFidelidade"
-      [(ngModel)]="model.numeroCartaoFidelidade">
+      <input type="text" class="form-control" id="inputCartao" name="numeroCartaoFidelidade" [(ngModel)]="model.numeroCartaoFidelidade">
     </div>
 
     <div class="col-md-4" style="margin: 10px;">
@@ -50,8 +48,7 @@
 
     <div class="col-md-4" style="margin: 10px;">
       <label for="inputLogradouro" class="form-label">Logradouro</label>
-      <input type="text" class="form-control" id="inputLogradouro" name="logradouro"
-      [(ngModel)]="model.endereco.logradouro">
+      <input type="text" class="form-control" id="inputLogradouro" name="logradouro" [(ngModel)]="model.endereco.logradouro">
     </div>
 
     <div class="col-md-1" style="margin: 10px;">
@@ -80,9 +77,10 @@
     </div>
 
 
-  <div class="col-12">
-    <button type="submit" class="btn btn-warning" style="margin: 10px;">Cadastrar</button>
-    
-    <button type="submit" class="btn btn-warning" style="margin: 0px;">Voltar</button>
+    <div class="col-12">
+      <button type="submit" class="btn btn-warning" style="margin: 10px;">Cadastrar</button>
+      
+      <button type="submit" class="btn btn-warning" style="margin: 0px;">Voltar</button>
+    </div>
   </div>
 </form>
