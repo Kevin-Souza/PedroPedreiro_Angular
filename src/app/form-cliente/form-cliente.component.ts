@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Cliente } from '../models/cliente';
 import { ClienteService } from '../Service/cliente.service';
 
@@ -8,27 +8,57 @@ import { ClienteService } from '../Service/cliente.service';
   templateUrl: './form-cliente.component.html',
   styleUrls: ['./form-cliente.component.css']
 })
+
 export class FormClienteComponent implements OnInit {
 
-  constructor(private cliente: ClienteService, private router: Router) { }
+  constructor(
+    private router: Router,
+    private clienteService: ClienteService,
+    private route: ActivatedRoute
+  ) { }
 
-  model: Cliente = new Cliente();
+  model: Cliente = new Cliente;
+
+  voltarParaLista() {
+    this.router.navigate(["/clientes"]);
+  }
+
+  OnSubmit(): void {
+    var id: number = this.route.snapshot.params['id'];
+
+    if (id > 0) {
+      this.clienteService.Editar(id, this.cliente).subscribe((data) => {
+        if (data > 0) {
+          alert('Cliente alterado com sucesso!');
+          this.voltarParaLista();
+        }
+      });
+    }
+    else {
+      this.clienteService.Adicionar(this.cliente).subscribe((data) => {
+        if (data > 0) {
+          alert('Cliente alterado com sucesso!');
+          this.voltarParaLista();
+        }
+      });
+    }
+  }
 
   ngOnInit(): void {
   }
 
-  onConfirmar(){
-    console.log(this.model);
-  }
+  obterPorId() {
+    var id: number = this.route.snapshot.params['id'];
 
-  OnSubmit(): void {
-    this.cliente.Adicionar(this.model).subscribe({
-      next: result => {
-        console.log(result)
-        this.router.navigate(['/clientes']);
+    this.clienteService.ObterPorId(id).subscribe(
 
+      dados => {
+        this.cliente = dados;
+      },
+      (err) => {
+        console.log(err)
       }
-    })
+    );
   }
 
 }

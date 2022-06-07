@@ -7,12 +7,18 @@ import { AppComponent } from './app.component';
 import { FormClienteComponent } from './form-cliente/form-cliente.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListClienteComponent } from './list-cliente/list-cliente.component';
+import { HomeComponent } from './home/home.component';
+import { ListClientesComponent } from './list-clientes/list-clientes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormClienteComponent,
-    NavbarComponent
+    NavbarComponent,
+    ListClienteComponent,
+    HomeComponent,
+    ListClientesComponent
   ],
   imports: [
     BrowserModule,
