@@ -19,7 +19,7 @@ export class ListClientesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.obterTodos();
+    //this.obterTodos();
   }
 
   obterTodos() {

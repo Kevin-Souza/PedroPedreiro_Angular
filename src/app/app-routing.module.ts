@@ -6,9 +6,10 @@ import { ListClientesComponent } from './list-clientes/list-clientes.component';
 
 const routes: Routes = [
   {path:"", component: HomeComponent },
-  {path: "clientes", component: ListClientesComponent },
-  {path: "cliente/id", component: FormClienteComponent },
-  //{path: "cliente", component: FormClienteComponent },
+  { path: "clientes", component: ListClientesComponent },
+
+  {path: "cliente", component: FormClienteComponent },
+  { path: "cliente/id", component: FormClienteComponent }
 ];
 
 @NgModule({

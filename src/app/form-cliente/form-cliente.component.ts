@@ -27,7 +27,7 @@ export class FormClienteComponent implements OnInit {
     var id: number = this.route.snapshot.params['id'];
 
     if (id > 0) {
-      this.clienteService.Editar(id, this.cliente).subscribe((data) => {
+      this.clienteService.Editar(id, this.model).subscribe((data) => {
         if (data > 0) {
           alert('Cliente alterado com sucesso!');
           this.voltarParaLista();
@@ -35,7 +35,7 @@ export class FormClienteComponent implements OnInit {
       });
     }
     else {
-      this.clienteService.Adicionar(this.cliente).subscribe((data) => {
+      this.clienteService.Adicionar(this.model).subscribe((data) => {
         if (data > 0) {
           alert('Cliente alterado com sucesso!');
           this.voltarParaLista();
@@ -53,7 +53,7 @@ export class FormClienteComponent implements OnInit {
     this.clienteService.ObterPorId(id).subscribe(
 
       dados => {
-        this.cliente = dados;
+        this.model = dados;
       },
       (err) => {
         console.log(err)
