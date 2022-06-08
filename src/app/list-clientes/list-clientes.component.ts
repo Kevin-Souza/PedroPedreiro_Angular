@@ -15,11 +15,11 @@ export class ListClientesComponent implements OnInit {
   cliente!: Cliente[];
 
   cadastrarCliente() {
-    this.route.navigate(["/clientes"]);
+    this.route.navigate(["/cliente"]);
   }
 
   ngOnInit(): void {
-    //this.obterTodos();
+    this.obterTodos();
   }
 
   obterTodos() {
